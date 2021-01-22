@@ -5,7 +5,7 @@
 # 定义fight函数实现游戏逻辑
 
 def fight():
-    # 定义4个变亮存放数据
+    # 定义4个变量存放数据
     my_hp = 1000
     my_power = 200
     enemy_hp = 1000
