@@ -14,7 +14,8 @@ class TestData:
 
     @pytest.mark.parametrize(['c','d'],[
         (10, 20),
-        (10, 30)
+        (10, 30),
+        (11, 29)
     ])
     def test_data_list(self, c ,d):
         print(c+d)
