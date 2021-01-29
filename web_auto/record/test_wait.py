@@ -17,12 +17,12 @@ class TestWait:
     def test_wait_1(self):
         self.driver.find_element_by_xpath('//*[@id="hotsearch-content-wrapper"]/li[1]/a/span[2]').click()
         sleep(5)
-        self.driver.find_element_by_class_name('title_3p8-I').click()
+        self.driver.find_element_by_class_name('c-span-last').click()
         print("hello")
 
     def test_wait_2(self):
         self.driver.find_element_by_xpath('//*[@id="hotsearch-content-wrapper"]/li[1]/a/span[2]').click()
-        self.driver.find_element_by_class_name('title_3p8-I').click()
+        self.driver.find_element_by_class_name('c-span-last').click()
         print("hello")
 
     def test_wait_3(self):
