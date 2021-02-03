@@ -1,7 +1,6 @@
 from time import sleep
 
-from selenium import webdriver
-from web_auto.record.base import Base
+from web_auto.record.selenium_basic.base import Base
 
 class TestFrame(Base):
 

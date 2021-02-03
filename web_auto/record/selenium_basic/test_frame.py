@@ -1,4 +1,4 @@
-from web_auto.record.base import Base
+from web_auto.record.selenium_basic.base import Base
 
 
 class TestFrame(Base):
