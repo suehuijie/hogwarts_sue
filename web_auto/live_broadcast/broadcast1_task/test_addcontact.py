@@ -16,8 +16,8 @@ class TestContact:
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(5)
 
-    # def teardown(self):
-    #     self.driver.quit()
+    def teardown(self):
+        self.driver.quit()
 
     # 通过复用浏览器获取到cookie
     def test_get_cookie(self):
