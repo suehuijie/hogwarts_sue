@@ -11,3 +11,6 @@ test_pytest/pytest_shizhan1/tests/test_calc.py
 
 ## web 自动化第一次直播课作业
 web_auto/live_broadcast/broadcast1_task
+
+## web 自动化第二次直播课作业
+web_auto/live_broadcast/po_contacts

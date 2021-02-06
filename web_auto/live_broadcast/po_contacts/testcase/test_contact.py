@@ -7,4 +7,10 @@ class TestContact:
         self.index = IndexPage()
 
     def test_addcontact(self):
-        self.index.add_member_button().add_member_save()
+        username = "xixi-sue023"
+        account = "202102040023"
+        phonenum = "13474400023"
+        addmemberpage = self.index.add_member_button()
+        addmemberpage.add_member_save(username,account,phonenum)
+        result = addmemberpage.get_member("sue-auto01")
+        assert result
