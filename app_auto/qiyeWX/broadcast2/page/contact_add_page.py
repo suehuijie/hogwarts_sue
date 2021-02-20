@@ -19,18 +19,14 @@ class ContactAddPage(BasePage):
         :return:
         """
         # 输入姓名、性别、手机号并点击保存
-        self.driver.find_element(MobileBy.XPATH,'//*[contains(@text,"姓名")]/../android.widget.EditText').send_keys(name)
-        self.driver.find_element(MobileBy.XPATH,'//*[contains(@text,"性别")]/..//*[@text="男"]').click()
+        self.find(MobileBy.XPATH,'//*[contains(@text,"姓名")]/../android.widget.EditText').send_keys(name)
+        self.find(MobileBy.XPATH,'//*[contains(@text,"性别")]/..//*[@text="男"]').click()
         if gender == "男":
-            self.driver.find_element(MobileBy.XPATH,'//*[@text="男"]').click()
+            self.find(MobileBy.XPATH,'//*[@text="男"]').click()
         else:
-            self.driver.find_element(MobileBy.XPATH,'//*[@text="女"]').click()
-        self.driver.find_element(MobileBy.XPATH,'//*[@text="手机号"]').send_keys(phone)
-        self.driver.find_element(MobileBy.ANDROID_UIAUTOMATOR,
-                                 'new UiScrollable(new UiSelector()'
-                                 '.scrollable(true).instance(0))'
-                                 '.scrollIntoView(new UiSelector()'
-                                 '.text("保存").instance(0))').click()
+            self.find(MobileBy.XPATH,'//*[@text="女"]').click()
+        self.find(MobileBy.XPATH,'//*[@text="手机号"]').send_keys(phone)
+        self.find_scroll("保存").click()
         sleep(2)
         print(self.driver.page_source)
 

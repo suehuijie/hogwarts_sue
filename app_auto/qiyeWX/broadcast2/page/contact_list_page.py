@@ -15,9 +15,5 @@ class ContactListPage(BasePage):
         :return:
         """
         # 滚动查找添加成员，并点击添加成员
-        self.driver.find_element(MobileBy.ANDROID_UIAUTOMATOR,
-                                 'new UiScrollable(new UiSelector()'
-                                 '.scrollable(true).instance(0))'
-                                 '.scrollIntoView(new UiSelector()'
-                                 '.text("添加成员").instance(0))').click()
+        self.find_scroll("添加成员").click()
         return MemberInviteMenuPage(self.driver)

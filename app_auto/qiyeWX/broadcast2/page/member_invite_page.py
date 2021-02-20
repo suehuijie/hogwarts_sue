@@ -15,8 +15,9 @@ class MemberInviteMenuPage(BasePage):
         :return:
         """
         # 点击手动输入添加
-        self.driver.find_element(MobileBy.XPATH, '//*[@text="手动输入添加"]').click()
+        self.find(MobileBy.XPATH, '//*[@text="手动输入添加"]').click()
         return ContactAddPage(self.driver)
 
     def verify_toast(self):
-        return "添加成功"
+        result = self.get_toast_text()
+        return result

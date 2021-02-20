@@ -9,9 +9,9 @@ class TestWX:
         self.main = self.app.start().goto_main()
 
     def test_addcontact(self):
-        name = "hogwards_sue005"
+        name = "hogwards_sue012"
         gender = "男"
-        phone = '13800000005'
+        phone = '13800000012'
 
         result = self.main.goto_contactlist().add_member().add_member_manul().\
             edit_contact(name,gender,phone).verify_toast()

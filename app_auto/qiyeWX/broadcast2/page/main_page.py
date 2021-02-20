@@ -8,6 +8,8 @@ from app_auto.qiyeWX.broadcast2.page.contact_list_page import ContactListPage
 class MainPage(BasePage):
     # def __init__(self,driver:WebDriver):
     #     self.driver = driver
+    # 首页-通讯录
+    _contact_list = MobileBy.XPATH, '//*[@text="通讯录"]'
 
     def goto_contactlist(self):
         """
@@ -15,5 +17,5 @@ class MainPage(BasePage):
         :return:
         """
         # 点击通讯录
-        self.driver.find_element(MobileBy.XPATH,'//*[@text="通讯录"]').click()
+        self.find(*self._contact_list).click()
         return ContactListPage(self.driver)
