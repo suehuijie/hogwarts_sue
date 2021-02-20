@@ -14,3 +14,6 @@ web_auto/live_broadcast/broadcast1_task
 
 ## web 自动化第二次直播课作业
 web_auto/live_broadcast/po_contacts
+
+## app 自动化第一次直播课作业（企业微信）
+app_auto/qiyeWX/broadcast1/test_contact.py
