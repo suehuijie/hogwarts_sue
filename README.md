@@ -17,3 +17,7 @@ web_auto/live_broadcast/po_contacts
 
 ## app 自动化第一次直播课作业（企业微信）
 app_auto/qiyeWX/broadcast1/test_contact.py
+
+## app 自动化第二次直播课作业（企业微信）
+app_auto/qiyeWX/broadcast2
+备注：老师，我这个删除成员的断言不知道怎么写

@@ -7,24 +7,21 @@ class TestWX:
 
     def setup(self):
         self.main = self.app.start().goto_main()
+        self.name = "hogwards_sue013"
+        self.gender = "男"
+        self.phone = '13800000013'
+
 
     def test_addcontact(self):
-        name = "hogwards_sue012"
-        gender = "男"
-        phone = '13800000012'
-
         result = self.main.goto_contactlist().add_member().add_member_manul().\
-            edit_contact(name,gender,phone).verify_toast()
+            edit_contact(self.name,self.gender,self.phone).verify_toast()
         assert result == '添加成功'
 
-    def test_addcontact1(self):
-        name = "hogwards_sue006"
-        gender = "男"
-        phone = '13800000006'
+    def test_delcontact(self):
+        result = self.main.goto_contactlist().search_button().search_member(self.name).\
+            MemberInfo().delete_member()
 
-        result = self.main.goto_contactlist().add_member().add_member_manul().\
-            edit_contact(name,gender,phone).verify_toast()
-        assert result == '添加成功'
+
 
     def teardown_class(self):
         self.app.stop()
